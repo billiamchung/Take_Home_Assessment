@@ -1,0 +1,21 @@
+III. Suggest changes that should be done in order to support any data type (as opposed to only an int data type)
+
+- This can be done easily by slightly modifying the Node class that is provided to us.
+- All we have to do is change the int member of the Node class to an Object in order to support a greater range of data types like so:
+
+[OLD]
+public class Node {
+    Node left;
+    Node right;
+    int num;
+}
+
+[NEW]
+public class Node {
+    Node left;
+    Node right;
+    Object obj;
+}
+
+By doing this, we allow Node to hold any data type as its value. Depending on the data type, we would have
+to serialize/deserialize the tree differently than we would do with an ordinary int.
